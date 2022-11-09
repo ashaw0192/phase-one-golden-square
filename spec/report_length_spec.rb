@@ -8,4 +8,8 @@ RSpec.describe "report_length method" do
         result = report_length("This is a big string. I hope this works.")
         expect(result).to eq "This string was 40 characters long."
     end
+    it "returns 0 when no string given" do
+        result = report_length("")
+        expect(result).to eq "This string was 0 characters long."
+    end
 end
